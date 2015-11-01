@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="www.quality.model.TblLcrk" table="TBLLCRK">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="sequence">     
+                <param name="sequence">SEQ_TBLLCRK</param>     
+            </generator>
+		</id>
+		<property name="huzhu" type="java.lang.String">
+			<column name="HUZHU" />
+		</property>
+		<property name="zinv" type="java.lang.String">
+			<column name="ZINV"/>
+		</property>
+		<property name="liuchushijian" type="java.util.Date">
+			<column name="LIUCHUSHIJIAN" />
+		</property>
+		<property name="nianling" type="java.lang.Integer">
+			<column name="NIANLING" />
+		</property>
+		<property name="xianjuzhudi" type="java.lang.String">
+			<column name="XIANJUZHUDI" />
+		</property>
+		<property name="danwei" type="java.lang.String">
+			<column name="DANWEI" />
+		</property>
+		<property name="dianhua" type="java.lang.String">
+			<column name="DIANHUA" />
+		</property>
+		<property name="beizhu" type="java.lang.String">
+			<column name="BEIZHU" />
+		</property>
+	</class>
+</hibernate-mapping>

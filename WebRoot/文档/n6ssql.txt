@@ -1,0 +1,4 @@
+UPDATE tbltsryfl SET name = '特殊关注人员' WHERE name = '宗教人员';
+update TBLFUNCTION set name='特殊关注人员' where name='宗教人员';
+alter table tblsyfwgl add ISCZFW number(1);
+commit;

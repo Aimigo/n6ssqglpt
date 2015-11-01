@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="n6ssqglpt"
+  id="myeclipse.1325139688437"
+  context-root="/n6ssqglpt"
+  j2ee-spec="5.0"
+  archive="n6ssqglpt.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

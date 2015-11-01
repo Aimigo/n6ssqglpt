@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="jyfw" extends="mybase">
+		<!-- 个人就业信息管理（个人简历） -->
+		<action name="grjl_*" class="www.quality.action.GrjlAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/jyfw/grjl/{1}.jsp</result>
+			<result name="success" type="redirectAction">grjl_list.action</result>
+		</action>
+		<!-- 职位信息动态管理（企业招聘） -->
+		<action name="qyzp_*" class="www.quality.action.QyzpAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/jyfw/qyzp/{1}.jsp</result>
+			<result name="success" type="redirectAction">qyzp_list.action</result>
+		</action>
+		<!-- 求职咨询智能服务（求职智能） -->
+		<action name="qzzn_*" class="www.quality.action.QzznAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/jyfw/qzzn/{1}.jsp</result>
+			<result name="success" type="redirectAction">qzzn_list.action</result>
+		</action>
+		<!-- 劳动技能培训多媒体资源信息管理 -->
+		<action name="pxjn_*" class="www.quality.action.PxjnAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/jyfw/pxjn/{1}.jsp</result>
+			<result name="success" type="redirectAction">pxjn_list.action?dtype=${_page.params.type}</result>
+		</action>
+		<action name="jnfl_*" class="www.quality.action.JnflAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/jyfw/jnfl/{1}.jsp</result>
+			<result name="success" type="redirectAction">jnfl_list.action</result>
+		</action>
+	</package>
+	<package name="mssw" extends="mybase">
+		<!-- 目录分类 -->
+		<action name="mlfl_*" class="www.quality.action.MlflAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/mssw/mlfl/{1}.jsp</result>
+			<result name="success" type="redirectAction">mlfl_list.action</result>
+		</action>
+		<!-- 目录管理 -->
+		<action name="mlgl_*" class="www.quality.action.MlglAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/mssw/mlgl/{1}.jsp</result>
+			<result name="success" type="redirectAction">mlgl_list.action</result>
+		</action>
+		<!-- 矛盾处理 -->
+		<action name="mdfl_*" class="www.quality.action.MdflAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/mssw/mdfl/{1}.jsp</result>
+			<result name="success" type="redirectAction">mdfl_list.action</result>
+		</action>
+		<!-- 矛盾处理 -->
+		<action name="mdcl_*" class="www.quality.action.MdclAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/mssw/mdcl/{1}.jsp</result>
+			<result name="success" type="redirectAction">mdcl_list.action</result>
+		</action>
+	</package>
+	<package name="ylws" extends="mybase">
+		<!-- 健康档案 -->
+		<action name="jkda_*" class="www.quality.action.JkdaAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/ylws/jkda/{1}.jsp</result>
+			<result name="success" type="redirectAction">jkda_list.action</result>
+		</action>
+		<!-- 医疗分类 -->
+		<action name="ylfl_*" class="www.quality.action.YlzsflAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/ylws/ylfl/{1}.jsp</result>
+			<result name="success" type="redirectAction">ylfl_list.action</result>
+		</action>
+		<!-- 医疗知识 -->
+		<action name="ylzs_*" class="www.quality.action.YlzsAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/ylws/ylzs/{1}.jsp</result>
+			<result name="success" type="redirectAction">ylzs_list.action</result>
+		</action>
+		<!-- 健康咨询分类 -->
+		<action name="zxfl_*" class="www.quality.action.ZxflAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/ylws/zxfl/{1}.jsp</result>
+			<result name="success" type="redirectAction">zxfl_list.action</result>
+		</action>
+		<!-- 健康咨询 -->
+		<action name="jkzx_*" class="www.quality.action.JkzxAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/ylws/jkzx/{1}.jsp</result>
+			<result name="success" type="redirectAction">jkzx_list.action</result>
+		</action>
+		<!-- 医疗信息推送记录 -->
+		<action name="xxts_*" class="www.quality.action.XxtsAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/ylws/xxts/{1}.jsp</result>
+			<result name="success" type="redirectAction">xxts_list.action</result>
+		</action>
+		<!-- 就业信息推送记录 -->
+		<action name="jyxxts_*" class="www.quality.action.JyxxtsAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/lly/jyfw/xxts/{1}.jsp</result>
+			<result name="success" type="redirectAction">jyxxts_list.action</result>
+		</action>
+		<!-- 人员信息推送记录 -->
+		<action name="xxtz_*" class="www.quality.action.XxtzAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/view/njb/xxtz/{1}.jsp</result>
+			<result name="success" type="redirectAction">xxtz_list.action</result>
+		</action>
+	</package>
+</struts>

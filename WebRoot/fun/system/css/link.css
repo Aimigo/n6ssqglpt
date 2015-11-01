@@ -1,0 +1,36 @@
+.pxkchvideo-border{overflow:hidden;}
+.tab-border{position: relative;height:820px;}
+.tb_left{width:100%;height:100%;position: absolute;right:0;}
+.tb_leftin{background:url(../images/sjtj.png) bottom no-repeat;height:100%;margin-right: 460px;}
+.tb_leftin ul{padding-left: 15px;}
+.tb_leftin li{background: url(../images/fl_tab.png) no-repeat;width:84px;height:103px;float: left;margin-bottom: 10px;padding:20px 18px 0;position: relative;}
+.tb_leftin li h3{text-align: center;color:#d12710;font-size: 20px;font-weight: bold;z-index: 1;position: absolute;width:84px;}
+
+/* .tb_leftin li .count{font-size: 90px;font-weight: bold;font-family: "Consolas";color:#fafafa;position: absolute;top:-10px;left:10px;z-index: 0;text-shadow:2px -2px 1px #ccc,-2px 2px 1px #ccc;}
+ */
+.tb_a{position: absolute;bottom: 20px;z-index: 9;}
+.tb_a a{color: #666;}
+.tb_a a:hover{color: #444;font-weight:bold}
+.tb_right{width:450px;height:auto;position: absolute;right:10px;z-index: 1;}
+.right_top{width:450px;height:508px;background: url(../images/fl_top4.png) no-repeat;position: relative;}
+.right_top span{width:60px;font-size: 18px;text-align: center;height:50px;font-weight: bold;}
+.right_top .rt_1{position: absolute;top:40px;right:8px;color:#d12710;}
+.right_top .rt_2{position: absolute;top:162px;left:5px;color:#ecaf44;}
+.right_top .rt_3{position: absolute;top:298px;right:8px;color:#199b77;}
+.right_top .rt_4{position: absolute;top:417px;left:5px;color:#1285bc;}
+.right_foot{width:450px;height:305px;border:1px solid #ddd;}
+/* 鍋ュ悍鍜ㄨ */
+.jkzx .jkzx_hd,.jkzx .jkzx_whd{background: url(../images/wdk.png) no-repeat;width:300px;height:195px;float: left;margin:0 5px 10px;}
+.jkzx .jkzx_whd{background: url(../images/wdk-hong.png) no-repeat;}
+.jkzx_title{overflow: hidden;}
+.jkzx_title span{line-height: 40px;font-size: 14px;margin-left: 5px;/* color: #fff; */float: left;}
+.jkzx_icon{float:right;}
+.jkzx_icon em,.jkzx_icon i{width:18px;height:19px;background: url(../images/bianji.png) no-repeat;display: inline-block;margin-right: 5px;margin-top: 10px;cursor: pointer;} 
+.jkzx_icon i{background: url(../images/shanchu.png) no-repeat;margin-left: -3px;}
+.jkzx_main{padding:0 5px;width:290px;height:155px;overflow: hidden;}
+.jkzx_main span{line-height: 22px;}
+.jkzx_main a{height:20px;float: right;}
+/* 婊氬姩鏉�*/
+.scroll{width:100%;height:35px;border-bottom: 1px solid #ddd;overflow: hidden;position: relative;}
+.scroll li{padding-left:10px;line-height: 35px;text-align: left;cursor: pointer; color: red}
+.s_ul{position: absolute;top:0;left:0;}

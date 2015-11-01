@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="www.quality.model.TblLog" table="TBLLOG">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="sequence">     
+                <param name="sequence">SEQ_TBLLOG</param>     
+            </generator>
+		</id>
+		<property name="username" type="java.lang.String">
+			<column name="USERNAME" />
+		</property>
+		<property name="projectname" type="java.lang.String">
+			<column name="PROJECTNAME" />
+		</property>
+		<property name="functionname" type="java.lang.String">
+			<column name="FUNCTIONNAME" />
+		</property>
+		<property name="operationname" type="java.lang.String">
+			<column name="OPERATIONNAME" />
+		</property>
+		<property name="ms" type="java.lang.String">
+			<column name="MS" />
+		</property>
+		<property name="operationtime" type="java.util.Date">
+			<column name="OPERATIONTIME" />
+		</property>	
+	</class>
+</hibernate-mapping>

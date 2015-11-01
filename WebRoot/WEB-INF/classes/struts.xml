@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 项目顶级包，里面设置有整个项目的全局拦截器（比如session超时,控制台打印错误），所有package务必继承自此包 -->
+	<package name="base" extends="struts-default">
+		<interceptors>
+			<!-- 声明session超时拦截器 -->
+			<interceptor name="sessionTimeout" class="www.quality.interceptor.SessionTimeoutInterceptor"></interceptor>
+			<!--重新组装的拦截器栈 -->
+			<interceptor-stack name="newStack">
+			<!--session超时拦截器  -->
+				<interceptor-ref name="sessionTimeout" />
+				<!--默认的拦截器 更改错误打印级别为error log4j必须打开  -->
+				<interceptor-ref name="defaultStack">
+				<param name="exception.logEnabled">true</param>
+				<param name="exception.logLevel">error</param>
+			</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 指定默认使用的拦截器集合 -->
+		<default-interceptor-ref name="newStack"></default-interceptor-ref>
+        <!-- 配置全局超时跳转页面 -->
+		<global-results>
+			<result name="sessionTimeOutPrompt">logintimeout.jsp</result>
+		</global-results>
+	</package>
+	
+	<!-- 项目顶级包，里面设置有整个项目的全局拦截器（比如session超时,控制台打印错误），所有package务必继承自此包 -->
+	<package name="mybase" extends="struts-default">
+		<interceptors>
+			<!-- 声明session超时拦截器 -->
+			<interceptor name="sessionTimeout" class="www.quality.interceptor.SessionTimeoutInterceptor"></interceptor>
+			<!-- 声明提取当前用户操作权限的拦截器 -->
+			<interceptor name="operationInterceptor" class="www.quality.interceptor.OperationInterceptor"/>
+			<!--重新组装的拦截器栈 -->
+			<interceptor-stack name="newStack">
+				<!--session超时拦截器  -->
+				<interceptor-ref name="sessionTimeout" />
+				<!--默认的拦截器 更改错误打印级别为error log4j必须打开  -->
+				<interceptor-ref name="defaultStack">
+					<param name="exception.logEnabled">true</param>
+					<param name="exception.logLevel">error</param>
+				</interceptor-ref>
+				<!-- 提取当前用户操作权限的拦截器 -->
+				<interceptor-ref name="operationInterceptor"/>
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 指定默认使用的拦截器集合 -->
+		<default-interceptor-ref name="newStack"></default-interceptor-ref>
+        <!-- 配置全局超时跳转页面 -->
+		<global-results>
+			<result name="sessionTimeOutPrompt">logintimeout.jsp</result>
+		</global-results>
+	</package>
+	
+	<!--配置上传文件的大小必须小于value -->
+	<constant name="struts.multipart.maxSize" value="104857600000"></constant>
+
+	<!--配置请求的后缀名 -->
+	<constant name="struts.action.extension" value="action" />
+
+	<!--配置struts2的模式为开发模式 -->
+	<constant name="struts.devMode" value="true" />
+
+	<!--配置struts2主题,这里设置为简单主题 -->
+	<constant name="struts.ui.theme" value="simple" />
+
+	<!-- 引入团队开发的分模块配置文件 -->
+	<include file="struts_quality.xml" />
+	<include file="struts_hqm.xml" />
+	<include file="struts_njb.xml" />
+	<include file="struts_lly.xml" />
+</struts>

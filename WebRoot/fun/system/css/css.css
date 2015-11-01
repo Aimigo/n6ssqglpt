@@ -1,0 +1,58 @@
+@charset "utf-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, table, td, th, div{margin:0; padding:0; border:0;}
+body{ margin:0 auto; padding:0; border:0; color:#000; background:#fafafa;}
+body,td,tr,p,li,select,input,textarea,div, h1, h2, h3, h4, h5, h6, h7{FONT: 12px/1.6 "宋体", "Lucida Grande",  "BitStream Vera Sans", Verdana, Sans-Serif;}
+fieldset, img, button{ border:none; }
+address, caption, cite, code, dfn, td, var { font-style:normal; font-weight:normal; }
+ul, ol { list-style:none; }
+input{ padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+input::-moz-focus-inner { border:none; padding:0; }
+select, input, img{ vertical-align:middle; }
+select, input, textarea { font-size:12px; margin:0; }
+input[type="text"], input[type="password"], textarea { outline-style:none; -webkit-appearance:none; }
+textarea { resize:none; }
+table { border-collapse:collapse; }
+
+
+ul,ol{list-style-type:none;}
+select,input,img{vertical-align:middle;}
+
+a{text-decoration:none;}
+a:link{color:#000000;}
+a:visited{color:#000000;}
+a:hover,a:active,a:focus{color:#ff0000;}
+
+.clearfix:after { content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.clearfix { zoom:1; display:inline-block;}
+.clearit { clear:both; height:0; font-size:0; overflow:hidden; }
+.box:after{content:".";display:block; height:0px; clear:both; visibility:hidden;}
+.hidden{visibility:hidden;}
+
+
+
+.fNumber{ padding-left:5px; font-family: "Times New Roman", Times, serif, Georgia; font-size:14px;}
+.fred{ color:#F00;}
+.fgreay{ color:#999;}
+.bgyellow{ background:#FFC; display:inline-block; width:100%; height:100%;}
+.bgorange{ background:#ffe185; display:inline-block; width:100%; height:100%;}
+font.today{ color:#ff0000;}
+
+
+
+.button02{ display:inline-block; margin:0 5px; padding:0px 10px; height:24px; line-height:24px; background:url(../images/button-bg.gif) repeat-x left bottom; border:solid 1px #c7c7c7; border-radius:2px; white-space:nowrap; word-break: break-all; vertical-align:middle;}
+.button02 img{ width:16px; height:16px; vertical-align:middle;}
+
+
+
+.w100{ width:100px; height:18px; line-height:18px; background:#fff; border:solid 1px #ccc;}
+
+
+input.bd-r{ width:100px; height:21px; line-height:21px; background:#fff; border:solid 1px #bebebe;}
+select.bd-r{ width:100px; height:23px; line-height:23px; background:#fff; border:solid 1px #bebebe;}
+
+
+
+
+ 
+
+

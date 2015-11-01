@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/tx
+						http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-3.0.xsd
+						http://www.springframework.org/schema/util 
+						http://www.springframework.org/schema/util/spring-util-3.0.xsd
+						http://www.springframework.org/schema/cache 
+						http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+	<!--1、配置spring的注解自动扫描 -->
+	<context:component-scan base-package="www.quality" />
+
+	<!-- 指定JDBC配置文件 -->
+	<context:property-placeholder location="/WEB-INF/config/jdbc.properties" />
+
+	<!-- 配置C3P0数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<!-- 数据库驱动类名 -->
+		<property name="driverClass" value="${driverClassName}" />
+		<!-- 连接数据库URL -->
+		<property name="jdbcUrl" value="${url}" />
+		<!-- 连接数据库的用户名 -->
+		<property name="user" value="${user}" />
+		<!-- 连接数据库的密码 -->
+		<property name="password" value="${password}" />
+		<!-- 初始数据源连接池的连接数 -->
+		<property name="initialPoolSize" value="10" />
+		<!-- 数据源连接池的最大的连接数 -->
+		<property name="maxPoolSize" value="40" />
+		<!-- 数据源连接池的最小的连接数 -->
+		<property name="minPoolSize" value="10" />
+
+		<property name="maxIdleTime" value="60"></property>
+
+		<property name="acquireIncrement" value="5"></property>
+		<!--每60秒检查所有连接池中的空闲连接。Default: 0 -->
+		<property name="idleConnectionTestPeriod" value="60"></property>
+	</bean>
+
+	<!--4、配置本地化代理工程bean,这是spring整合hibernate的入口 -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<!-- 注入数据库源 -->
+		<property name="dataSource" ref="dataSource" />
+		<!--加载hibernate.cfg.xml文件,/WEB-INF/classes/hibernate.cfg.xml -->
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath*:www/quality/model/</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<!-- MYSQL -->
+				<!--<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop> -->
+				<!-- oracle -->
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</prop>
+				<!--<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop> -->
+				<!-- <prop key="hibernate.dialect">www.quality.util.SqlServer2008Dialect</prop> -->
+				<!--<prop key="hibernate.hbm2ddl.auto">update</prop>-->
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.bytecode.use_reflection_optimizer">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.use_sql_comments">true</prop>
+				<prop key="hibernate.generate_statistics">true</prop>
+				<prop key="hibernate.order_updates"> true</prop>
+				<prop key="hibernate.max_fetch_depth ">1</prop>
+				<prop key="hibernate.use_identifer_rollback true">false</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!--5、配置事务管理器 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!--6、配置事务的注解 -->
+	<tx:annotation-driven transaction-manager="txManager" />
+	
+	<!-- -->
+	<!-- <bean id="SpringConfigTool" class="www.quality.util.SpringConfigTool"></bean> -->
+</beans>

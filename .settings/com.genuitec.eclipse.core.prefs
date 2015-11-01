@@ -1,0 +1,4 @@
+#Thu Jan 31 10:53:36 CST 2013
+eclipse.preferences.version=1
+validator.Checked=src/www/pdwy/action/LoginAction.java,WebRoot/WEB-INF/page/pager.jsp,WebRoot/WEB-INF/page/public/imgUp.jsp,WebRoot/WEB-INF/page/function/editFunction.jsp,WebRoot/WEB-INF/page/log/pager.jsp
+validator.Unchecked=

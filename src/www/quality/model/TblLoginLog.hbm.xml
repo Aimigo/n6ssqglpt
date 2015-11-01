@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="www.quality.model.TblLoginLog" table="TBLLOGINLOG">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="sequence">     
+                <param name="sequence">SEQ_TBLLOGINLOG</param>     
+            </generator> 
+		</id>
+		<property name="username" type="java.lang.String">
+			<column name="USERNAME" />
+		</property>
+		<property name="realname" type="java.lang.String">
+			<column name="REALNAME" />
+		</property>
+		<property name="loginip" type="java.lang.String">
+			<column name="LOGINIP" />
+		</property>
+		<property name="logintime" type="java.util.Date">
+			<column name="LOGINTIME" />
+		</property>
+	</class>
+</hibernate-mapping>

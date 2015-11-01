@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="nijb" extends="mybase">
+		<!-- 居民信息 -->
+		<action name="jmxx_*" class="www.quality.action.JmxxAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/page/view/njb/jmxx/{1}.jsp</result>
+			<result name="pop">/WEB-INF/page/view/njb/jmxx/hjtree.jsp</result>
+			<result name="ldpop">/WEB-INF/page/view/njb/jmxx/ldpop.jsp</result>
+			<result name="addhj">/WEB-INF/page/view/njb/jmxx/addhj.jsp</result>
+			<result name="xqpop">/WEB-INF/page/view/njb/jmxx/xqpop.jsp</result>
+			<result name="gjcx">/WEB-INF/page/view/njb/jmxx/gjcx.jsp</result>
+			<result name="pop2">/WEB-INF/page/view/njb/jmxx/syfwtree.jsp</result>
+			<result name="success" type="redirectAction">jmxx_list.action</result>
+			<result name="excel" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="${fileName}_.xls"</param>
+				<param name="inputName">excelFile</param>
+				<param name="bufferSize">1024</param> 
+				<param name="encode">true</param>
+			</result>
+			<result name="input">/WEB-INF/page/view/njb/jmxx/fileup.jsp</result>
+			<result name="cglist" type="redirectAction">
+				<param name="actionName">tsry_list.action</param>
+				<param name="msg">${msg}</param>
+				<param name="ryflid">${flid}</param>
+				<param name="message">${message}</param>
+				<param name="encode">true</param>
+			</result>
+		</action>
+		<!-- 重复验证 -->
+		<action name="verifyRepeat" class="www.quality.action.JmxxAction" method="verifyRepeat" ></action>
+		<!-- 住宅信息 -->
+		<action name="zz_*" class="www.quality.action.ZzAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/page/view/njb/zhuzhai/{1}.jsp</result>
+			<result name="gridpop">/WEB-INF/page/view/njb/zhuzhai/gridpop.jsp</result>
+			<result name="wgpop">/WEB-INF/page/view/njb/zhuzhai/wgpop.jsp</result>
+			<result name="success" type="redirectAction">zz_list.action</result>
+		</action>
+		<!-- 实有房屋 -->
+		<action name="syfw_*" class="www.quality.action.SyfwglAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/page/view/njb/shiyfw/{1}.jsp</result>
+			<result name="pop">/WEB-INF/page/view/njb/shiyfw/fwtree.jsp</result>
+			<result name="success" type="redirectAction">syfw_list.action</result>
+		</action>
+		<!-- 户籍管理 -->
+		<action name="hjgl_*" class="www.quality.action.HjglAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/page/view/njb/hjgl/{1}.jsp</result>
+			<result name="pop">/WEB-INF/page/view/njb/hjgl/fwtree.jsp</result>
+			<result name="success" type="redirectAction">hjgl_list.action</result>
+		</action>
+		<!-- 出租房屋管理 -->
+		<action name="czfwgl_*" class="www.quality.action.CzfwglAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/page/view/njb/cuzfwgl/{1}.jsp</result>
+			<result name="pop">/WEB-INF/page/view/njb/cuzfwgl/wgtree.jsp</result>
+			<result name="pop2">/WEB-INF/page/view/njb/cuzfwgl/syfwtree.jsp</result>
+			<result name="success" type="redirectAction">czfwgl_list.action</result>
+		</action>
+		<!-- 特殊人员管理 -->
+		<action name="tsry_*" class="www.quality.action.TsryAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/page/view/njb/tsry/{1}.jsp</result>
+			<result name="success" type="redirectAction">tsry_list.action</result>
+		</action>
+		<!-- 出租房屋管理 -->
+		<action name="zzrxx_*" class="www.quality.action.ZzrxxAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/page/view/njb/zuzrxx/{1}.jsp</result>
+			<result name="pop2">/WEB-INF/page/view/njb/zuzrxx/syfwtree.jsp</result>
+			<result name="success" type="redirectAction">zzrxx_list.action</result>
+		</action>
+		<!-- 人员信息统计管理 -->
+		<action name="rytj" class="www.quality.action.RytjAction">
+			<result name="success">/WEB-INF/page/view/njb/rytj/list.jsp</result>
+		</action>
+		<!-- 人口流出管理 -->
+		<action name="lcrk_*" class="www.quality.action.LcrkAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/page/view/njb/lcrk/{1}.jsp</result>
+			<result name="success" type="redirectAction">lcrk_list.action</result>
+		</action>
+		<!-- 流出人口统计管理 -->
+		<action name="rktj_*" class="www.quality.action.RktjAction" method="{1}">
+			<result name="success">/WEB-INF/page/view/njb/rktj/list.jsp</result>
+		</action>
+	</package>
+	<package name="nijb_jiekou" extends="struts-default">
+		<action name="gettsry" class="www.quality.action.TsryAction"
+				method="getTsry">
+		</action>
+		<action name="excelimp_*" class="www.quality.action.ImportTsryAction"
+				method="{1}">
+				<result name="excel" type="stream">
+					<param name="contentType">application/vnd.ms-excel</param>
+					<param name="contentDisposition">attachment;filename="${fileName}_.xls"</param>
+					<param name="inputName">excelFile</param>
+					<param name="bufferSize">1024</param> 
+					<param name="encode">true</param>
+				</result>
+				<result name="input">/WEB-INF/page/view/njb/tsry/fileup.jsp</result>
+				<result name="cglist" type="redirectAction">
+					<param name="actionName">tsry_list.action</param>
+					<param name="msg">${msg}</param>
+					<param name="ryflid">${flid}</param>
+					<param name="message">${message}</param>
+					<param name="encode">true</param>
+				</result>
+		</action>
+	
+	</package>
+	<package name="nijb_mobile" extends="struts-default">
+	<action name="zhuzhai_*" class="www.quality.action.ZhuzhaiAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/page/view/njb/jmxx/{1}.jsp</result>
+	</action>
+	</package>
+</struts>

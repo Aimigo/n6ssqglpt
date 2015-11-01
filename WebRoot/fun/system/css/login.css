@@ -1,0 +1,25 @@
+﻿@charset "utf-8";
+/* ws begin */
+/* 全局 */
+
+body{color:#000; margin:0 auto; padding:0; border:0; overflow:hidden;  background:url(../images/bj_r1_c1.jpg) repeat-x top center #8fbf5e;}
+
+a{text-decoration: underline;}
+a:link{color:#459ec6;}
+a:visited{color:#459ec6;}
+a:hover,a:active,a:focus{color:#459ec6;}
+img{ border:none;}
+
+
+
+.login{ margin:0 auto; width:1100px; height:530px; position:relative; text-align:left; }
+.dlk{ position:absolute; top:120px; right:80px; width:288px; height:296px; background:url(../images/dl-login.png) no-repeat; padding-top:100px; padding-left:20px; font-size:14px;}
+.yhm{ line-height:40px; height:40px;}
+.yhm span{ display:inline-block; width:70px;}
+.dlkinput{ width:120px; border:1px solid #999999; height:22px;}
+.dl{ margin-top:40px; padding-left:40px; font-size:12px;}
+
+
+
+
+

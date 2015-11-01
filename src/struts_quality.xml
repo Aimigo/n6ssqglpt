@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="ht" extends="mybase">
+		<!-- 登录 -->
+		<action name="login_*" class="www.quality.action.LoginAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/system/index/{1}.jsp</result>
+			<result name="success">/WEB-INF/page/system/index/index.jsp</result>
+			<result name="input" type="redirect">login.jsp</result>
+		</action>
+		<!-- 用户 -->
+		<action name="user_*" class="www.quality.action.UserAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/system/user/{1}.jsp</result>
+			<result name="success" type="redirectAction">user_list.action</result>
+		</action>
+		<!-- 角色 -->
+		<action name="role_*" class="www.quality.action.RoleAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/system/role/{1}.jsp</result>
+			<result name="success" type="redirectAction">role_list.action</result>
+			<result name="tree">/WEB-INF/page/system/role/tree.jsp</result>
+		</action>
+		<!-- 功能 -->
+		<action name="function_*" class="www.quality.action.FunctionAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/system/function/{1}.jsp</result>
+			<result name="funList">/WEB-INF/page/system/function/funList.jsp</result>
+			<result name="success" type="redirectAction">function_list.action</result>
+		</action>
+		<!-- 项目 -->
+		<action name="project_*" class="www.quality.action.ProjectAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/system/project/{1}.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">project_list.action</param>
+			</result>
+		</action>
+		<!-- 登录日志 -->
+		<action name="loginlog_*" class="www.quality.action.LoginLogAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/system/loginlog/{1}.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">loginlog_list.action</param>
+			</result>
+		</action>
+		<!-- 操作日志 -->
+		<action name="log_*" class="www.quality.action.LogAction" method="{1}">
+			<result name="{1}">/WEB-INF/page/system/log/{1}.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">log_list.action</param>
+			</result>
+		</action>
+		<!-- 文件上传 -->		
+		<action name="upLoadAction" class="www.quality.action.UpLoadAction" method="input">
+			<result name="input">/WEB-INF/page/public/imgUp.jsp</result>
+		</action>
+		<action name="uploadfile_*" class="www.quality.action.UploadFileAction" method="{1}">
+			<result name="uploadfile">/upload/jsp/upload.jsp</result>
+			<result name="readonline">/upload/flexpaper/jsp/index.jsp</result>
+			<result name="videoplayer">/upload/ckplayer66/jsp/index.jsp</result>
+		</action>
+		<!-- 行政区划 -->
+		<action name="region_*" class="www.quality.action.RegionAction" method="{1}">
+			<result name="success">/WEB-INF/page/public/region.jsp</result>
+		</action>
+		<!-- 职位分类 -->
+		<action name="zwfl_*" class="www.quality.action.ZwflAction" method="{1}">
+			<result name="success">/WEB-INF/page/public/zwfl.jsp</result>
+		</action>
+	</package>
+</struts>

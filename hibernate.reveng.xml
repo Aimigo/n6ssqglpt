@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="SYSDIC_JUMINXINXI" schema="LLY" class="TblJmxx">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLCBXX" schema="LLY" class="TblCbxx">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLCZFWGL" schema="LLY" class="TblCzfwgl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLDEPARTMENT" schema="LLY" class="TblDepartment">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLGRJL" schema="LLY" class="TblGrjl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLHJGL" schema="LLY" class="TblHjgl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLHJJTXX" schema="LLY" class="TblHjjtxx">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLJKZX" schema="LLY" class="TblJkzx">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLJKZXFL" schema="LLY" class="TblJkzxfl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLJNFL" schema="LLY" class="TblJnfl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLJTXX" schema="LLY" class="TblJtxx">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLLLGL" schema="LLY" class="TblLlgl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLMDCL" schema="LLY" class="TblMdcl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLMLFL" schema="LLY" class="TblMlfl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLMLGL" schema="LLY" class="TblMlgl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLPXJN" schema="LLY" class="TblPxjn">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLQYZP" schema="LLY" class="TblQyzp">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLSYFWGL" schema="LLY" class="TblSyfwgl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLREGION" schema="LLY" class="TblRegion">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLTSJL" schema="LLY" class="TblTsjl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLTSRYFL" schema="LLY" class="TblTsryfl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLTSRYFLZD" schema="LLY" class="TblTsryflzd">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLTSRYSJ" schema="LLY" class="TblTsrysj">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLWHFL" schema="LLY" class="TblWhfl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLWHYLFL" schema="LLY" class="TblWhylfl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLXSXX" schema="LLY" class="TblXsxx">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLYJZS" schema="LLY" class="TblYjzs">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLYLZSFL" schema="LLY" class="TblYlzsfl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLZZRXX" schema="LLY" class="TblZzrxx">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="XJGQT_ZHUZAI" schema="LLY" class="TblZz">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="XJ_LIAND_GRID" schema="LLY" class="TblGrid">
+		<primary-key>
+
+		</primary-key>
+	</table>
+	<table name="TBLZWFL" schema="LLY" class="TblZwfl">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+	<table name="TBLGRJKDA" schema="LLY" class="TblGrjkda">
+		<primary-key>
+			<generator class="sequence"></generator>
+		</primary-key>
+	</table>
+<table name="TBLMDFL" schema="LLY" class="TblMdfl">
+	<primary-key>
+		<generator class="sequence"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

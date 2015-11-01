@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="www.quality.model.TblFunction" table="TBLFUNCTION">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="sequence">     
+                <param name="sequence">SEQ_TBLFUNCTION</param>     
+            </generator>
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="code" type="java.lang.String">
+			<column name="CODE"/>
+		</property>
+		<property name="fcode" type="java.lang.String">
+			<column name="FCODE" />
+		</property>
+		<property name="projectcode" type="java.lang.String">
+			<column name="PROJECTCODE" />
+		</property>
+		<property name="funicon" type="java.lang.String">
+			<column name="FUNICON" />
+		</property>
+		<property name="funicon2" type="java.lang.String">
+			<column name="FUNICON2" />
+		</property>
+		<property name="url" type="java.lang.String">
+			<column name="URL" />
+		</property>
+		<property name="marker" type="java.lang.Integer">
+			<column name="MARKER" />
+		</property>
+		<property name="ms" type="java.lang.String">
+			<column name="MS" />
+		</property>
+	</class>
+</hibernate-mapping>

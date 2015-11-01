@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="hqm" extends="mybase">
+		<!-- 文化娱乐 -->
+		<action name="whyl_*" class="www.quality.action.WhylAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/page/view/hqm/whyl/{1}.jsp</result>
+			<result name="success" type="redirectAction">whyl_list.action</result>
+		</action>
+		<!-- 文化分类 -->
+		<action name="whfl_*" class="www.quality.action.WhflAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/page/view/hqm/whfl/{1}.jsp</result>
+			<result name="success" type="redirectAction">whfl_list.action</result>
+		</action>
+		<!-- 文化点播 -->
+		<action name="whyldb_*" class="www.quality.action.WhyldbAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/page/view/hqm/whyldb/{1}.jsp</result>
+			<result name="success" type="redirectAction">whyldb_list.action</result>
+		</action>
+	</package>
+</struts>
